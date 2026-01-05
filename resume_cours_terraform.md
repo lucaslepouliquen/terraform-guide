@@ -753,6 +753,7 @@ terraform show          # Afficher le state actuel
 terraform output        # Afficher les outputs
 terraform refresh       # Synchroniser le state avec l'infrastructure réelle
 terraform graph         # Générer un graphe de dépendances
+terraform graph | dot -Tsvg > terraform_graph.svg # Générer un graphe de dépendances au format svg 
 terraform console       # Console interactive
 terraform providers     # Afficher les providers requis
 ```
