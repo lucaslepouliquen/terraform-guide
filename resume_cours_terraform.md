@@ -124,6 +124,8 @@ resource "local_file" "pet" {
 }
 ```
 
+We can use any name for a variable except for: source, version, providers, count, for_each, lifecycle, depends_on and locals.
+
 ### Méthodes d'assignation (par ordre de précédence)
 
 1. Variables d'environnement: `export TF_VAR_filename="/root/pets.txt"`
