@@ -236,11 +236,11 @@ resource "local_file" "pet" {
 ### Commandes State
 
 ```bash
-terraform state list                    # Liste les ressources
+terraform state list          # Liste les ressources
 terraform state show          # Détails d'une ressource
-terraform state mv        # Renommer une ressource
+terraform state mv            # Renommer une ressource
 terraform state rm            # Retirer du state
-terraform state pull                    # Récupérer le state distant
+terraform state pull          # Récupérer le state distant
 ```
 
 ---
