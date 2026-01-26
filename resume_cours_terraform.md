@@ -148,6 +148,20 @@ variable "filename" {
 - `object` - Structure complexe avec types spécifiques
 - `tuple` - Liste avec types spécifiques pour chaque élément
 
+```hcl
+variable "map_exemple"
+{
+  type = object({
+    name = string
+    age = number
+  })
+  default = {
+  name = "John"
+  age  = 52
+  }
+}
+```
+
 ### Utilisation
 
 ```hcl
