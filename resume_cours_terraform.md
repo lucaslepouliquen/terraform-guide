@@ -264,7 +264,9 @@ resource "local_file" "pet" {
 
 ## 10. Data Sources
 
-Lecture d'informations existantes sans les gérer:
+Récupère des informations depuis ton infrastructure existante plutôt que de créer de nouvelles ressources.
+Resource (resource) : crée ou gère une ressource (VM, réseau, etc.)
+Data source (data) : lit des informations sur une ressource existante
 
 ```hcl
 data "local_file" "dog" {
