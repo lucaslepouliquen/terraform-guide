@@ -348,6 +348,8 @@ resource "local_file" "pet" {
 
 ## 12. Version Constraints
 
+Ce fait dans le main.tf ou dans le version.tf
+
 ```hcl
 terraform {
   required_providers {
