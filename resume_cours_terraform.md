@@ -197,6 +197,39 @@ Commandes:
 
 ---
 
+Les output variables servent à exposer des informations après l'application de ton infrastructure. Elles ont plusieurs usages : 
+Afficher des informations importantes :
+
+```hcl
+output "instance_ip" {
+  value = aws_instance.web.public_ip
+  description = "L'IP publique du serveur web"
+}
+```
+
+Après `terraform apply`, tu verras :
+```
+Outputs:
+instance_ip = "52.12.34.56"
+```
+
+Partager des données entre modules :
+```hcl
+# Module "network"
+output "vpc_id" {
+  value = aws_vpc.main.id
+}
+
+# Module "app" qui utilise "network"
+module "network" {
+  source = "./modules/network"
+}
+
+resource "aws_instance" "app" {
+  vpc_id = module.network.vpc_id  # Utilise l'output du module
+}
+```
+
 ## 7. Resource Attributes & Dependencies
 
 ### Implicit Dependency
