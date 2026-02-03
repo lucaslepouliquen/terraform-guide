@@ -149,7 +149,7 @@ variable "filename" {
 - `tuple` - Liste avec types spécifiques pour chaque élément
 
 ```hcl
-variable "map_exemple"
+variable "object_exemple"
 {
   type = object({
     name = string
